@@ -1,5 +1,5 @@
 # Setup
-title: Xenonminer's Blog
+title: Xenonminer's Website
 url: https://xenonminer.github.io
 paginate: 1
 baseurl: ""
@@ -41,8 +41,11 @@ version: 3.0.0
 
 # Navbar page list
 nav:
-  - title: Blog
-    url: /archive
+  - title: Projects
+    url: /projects
+    
+  - title: Writeups
+    url: /writeups
 
-  - title: About
-    url: /about
+  - title: About Me
+    url: /aboutme
