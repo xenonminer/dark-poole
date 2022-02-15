@@ -14,6 +14,7 @@ payload = {
     'portalAccountUsername': 'email', #replace with your email
     
     'portalAccountPassword': 'password' #replace with your password
+    
 }
 
 with requests.Session() as s:
@@ -32,7 +33,6 @@ with requests.Session() as s:
     number_grades = []
     
     for string in strings:
-    
         string = string.get_text().strip() #get the raw text from each element in strings
         
         if string != "": #for strings with text
@@ -49,8 +49,9 @@ with requests.Session() as s:
             
                 class_names.append(string) # it's a class
 
-    for num in numbers:
-    
+
+
+    for num in numbers:    
         if('span' in str(num)): #if there's span in the element (only number grades have span in them)
         
             num = num.span # num is equal to the span tag
