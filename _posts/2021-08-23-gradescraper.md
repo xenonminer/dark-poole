@@ -65,6 +65,7 @@ with requests.Session() as s:
                 
                     number_grades.append(num) # it's a number grade
 
+
     assert len(class_names) == len(teachers) == len(letter_grade) == len(number_grades)
 
     # iterate through all the lists at the same time and print the elements as it goes
