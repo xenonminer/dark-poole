@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 
 payload = {
     'portalAccountUsername': 'email', #replace with your email
+    
     'portalAccountPassword': 'password' #replace with your password
 }
 
