@@ -67,6 +67,7 @@ with requests.Session() as s:
     assert len(class_names) == len(teachers) == len(letter_grade) == len(number_grades)
 
     # iterate through all the lists at the same time and print the elements as it goes
+    
     for name, teacher, letter, number in zip(class_names, teachers, letter_grade, number_grades):
         if(letter == "A+" or number == '100.00'):
             code = '\u001b[32;1m'
