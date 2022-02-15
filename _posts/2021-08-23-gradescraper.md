@@ -50,7 +50,6 @@ with requests.Session() as s:
                 class_names.append(string) # it's a class
 
 
-
     for num in numbers:    
         if('span' in str(num)): #if there's span in the element (only number grades have span in them)
         
