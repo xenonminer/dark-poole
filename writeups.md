@@ -1,5 +1,7 @@
 ---
-
+layout: post
+title: writeups
+---
 
 # CTF Writeups
 
