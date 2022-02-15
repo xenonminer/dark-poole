@@ -1,6 +1,6 @@
 ---
 layout: post
-title: writeups
+title: Writeups
 ---
 
 # CTF Writeups
