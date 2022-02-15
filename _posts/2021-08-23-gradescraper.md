@@ -29,23 +29,39 @@ with requests.Session() as s:
     teachers = []
     letter_grade = []
     number_grades = []
+    
     for string in strings:
+    
         string = string.get_text().strip() #get the raw text from each element in strings
+        
         if string != "": #for strings with text
+        
             if(len(string) < 3 and string[0].isupper()): #if the string is less than 3 chars and the first letter is uppercase
+            
                 letter_grade.append(string) # it's a letter grade
+                
             elif(string.istitle() and '-' not in string): #if the string is a title (all words only have the first letter capitalized) and there are no hyphens)
+            
                 teachers.append(string) # it's a teacher
+                
             elif(len(string) > 5): # if it's not the other two and the length of the string is greater than 5
+            
                 class_names.append(string) # it's a class
 
     for num in numbers:
+    
         if('span' in str(num)): #if there's span in the element (only number grades have span in them)
+        
             num = num.span # num is equal to the span tag
+            
         if(num.get('style') != "display:none;"): # if the style attribute of the span tag isn't "display:none;"
+        
             num = num.get_text().strip() # get the innerHTML of the span
+            
             if num != "" and len(num) > 2: # if the text is greater than 2 and isn't nothing
+            
                 if(num[:2].isnumeric()): # if the first two characters of the grade are numbers
+                
                     number_grades.append(num) # it's a number grade
 
     assert len(class_names) == len(teachers) == len(letter_grade) == len(number_grades)
