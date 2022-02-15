@@ -42,7 +42,7 @@ version: 3.0.0
 # Navbar page list
 nav:
   - title: Projects
-    url: /projects
+    url: /posts/projects
     
   - title: Writeups
-    url: /writeups
+    url: /posts/writeups
