@@ -10,6 +10,7 @@ title: Writeups
 | CTF | Category |
 |---|---|
 | [hsctf 8 2021](_posts/2021-06-29-hsctf82021.md) | Misc, Web |
+| [LIT 2021](_posts/2021-07-22-LIT2021.md) | Misc, Pwn, Rev, Web |
 
 ## 2022
 
