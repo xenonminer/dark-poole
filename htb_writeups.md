@@ -10,4 +10,3 @@ title: HTB Writeups
 | Machine |
 |---|
 |  |
-|  |
