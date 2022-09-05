@@ -44,8 +44,8 @@ nav:
   - title: Projects
     url: /projects
     
-  - title: CTF Writeups
+  - title: CTF-Writeups
     url: /ctf-writeups
     
-  - title: HTB Writeups
+  - title: HTB-Writeups
     url: /htb-writeups
