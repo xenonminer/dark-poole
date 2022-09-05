@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Writeups
+title: CTF Writeups
 ---
 
 # CTF Writeups
