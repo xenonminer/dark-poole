@@ -3,7 +3,7 @@ layout: default
 title: HTB Writeups
 ---
 
-# CTF Writeups
+# HTB Writeups
 
 ## Easy
 
