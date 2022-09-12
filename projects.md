@@ -15,5 +15,5 @@ title: Projects
 
 | Project | Description |
 |---|---|
-| [wackersBot](_posts/2021-08-23-gradescraper.md) | Discord CTF Bot |
-| [dirfuzzer](_posts/2021-08-23-gradescraper.md) | Small Directory Fuzzer |
+| [wackersBot](_posts/2022-01-10-wackersBot.md) | Discord CTF Bot |
+| [dirfuzzer](_posts/2022-07-26-dirfuzzer.md) | Small Directory Fuzzer |
