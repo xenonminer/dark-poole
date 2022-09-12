@@ -7,24 +7,24 @@ title: HTB Writeups
 
 ## Easy
 
-| Machine |
-|---|
-|  |
+| Machine | Description |
+|---|---|
+|  |  |
 
 ## Medium
 
-| Machine |
-|---|
-| [Noter](_posts/2022-09-11-Noter.md) |
+| Machine | Description |
+|---|---|
+| [Noter](_posts/2022-09-11-Noter.md) |  |
 
 ## Hard
 
-| Machine |
-|---|
-|  |
+| Machine | Description |
+|---|---|
+|  |  |
 
 ## Insane
 
-| Machine |
-|---|
-|  |
+| Machine | Description |
+|---|---|
+|  |  |
