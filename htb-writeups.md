@@ -15,7 +15,7 @@ title: HTB Writeups
 
 | Machine | Description |
 |---|---|
-| [Noter](_posts/2022-09-11-Noter.md) |  |
+|  |  |
 
 ## Hard
 
