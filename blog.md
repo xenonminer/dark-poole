@@ -11,4 +11,4 @@ I will use this page to post about different pentesting methodologies, and some 
 
 | Post | Description |
 |---|---|
-| [Vim Checklist](_posts/2022-09-19-vim_tutorial.md) | Everything vim that you will ever need! |
+| [Vim Checklist](_posts/2022-09-19-vim_checklist.md) | Everything vim that you will ever need! |
