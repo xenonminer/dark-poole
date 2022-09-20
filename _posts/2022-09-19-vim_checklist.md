@@ -9,20 +9,20 @@ Click on the different commands to popup an gif/image with an example of the com
 
 When entering into vim, you enter command mode. Command mode is where most of the commands in vim will be used.
 
-| Command | Description |
-|---|---|
+| Command | Description | Example |
+|---|---|---|
 
 
 ## Insert Mode
 
 Insert mode will be used to do all the typing/programming. 
 
-| Command | Description |
-|---|---|
+| Command | Description | Example |
+|---|---|---|
 
 ## Visual Mode
 
 Visual mode will be used to do different things to characters/lines of text.
 
-| Command | Description |
-|---|---|
+| Command | Description | Example |
+|---|---|---|
