@@ -12,7 +12,7 @@ When entering into vim, you enter normal mode. Command mode is where most of the
 | Command | Description | Example |
 |---|---|---|
 | Esc | Entering normal mode (if not already in) |  |
-| <ul><li>:w : write to the file</li><li>:q : quit the file if nothing written</li><li>:q! : force quit even with written text</li></ul> | quitting/writing to vim | 
+| <ul><li>:w : write to the file</li><li>:q : quit the file if nothing written</li><li>:q! : force quit even with written text</li></ul> | quitting/writing to vim |  |
 
 ## Insert Mode
 
