@@ -13,6 +13,12 @@ When entering into vim, you enter normal mode. Command mode is where most of the
 |---|---|---|
 | Esc | Entering normal mode (if not already in) |  |
 | <ul><li>:w : write to the file</li><li>:q : quit the file if nothing written</li><li>:q! : force quit even with written text</li></ul> | quitting/writing to vim |  |
+| :!<command> | Running shell commands from vim |  |
+| <ul><li>:set number : normal line numbers</li><li>:set relativenumber : line numbers are relative</li></ul> | Make vim have line numbers |  |
+| Ex: 5<arrow key down> (goes 5 lines down) | Typing a number x before a vim command makes you do that command x many times |  |
+| <ul><li>h : move left</li><li>j : move down</li><li>k : move up</li><li>l : move right</li></ul> | Moving around (arrow keys also works) |  |
+| <ul><li> u : undo (undoes whatever you just did in the last insert mode only)</li><li>Ctrl + r : redo</li></ul> | undo/redo previous actions |  |
+|   
 
 ## Insert Mode
 
