@@ -1,3 +1,8 @@
+---
+layout: post
+title: Vim checklist
+---
+
 This is a easy access vim checklist that has examples along with the commands and description.
 
 ## Normal Mode
