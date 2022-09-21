@@ -26,6 +26,7 @@ When entering into vim, you enter normal mode. Command mode is where most of the
   | <ul><li>w : move forward a word (this consideres a word separated by hyphens or other searators as well besides spaces)</li><li>Shift + w : move forward a word (only delimiter is a space)</li><li>b : move backward a word (same conditions as moving forward)</li><li>Shift + b : move backward a word (same conditions as moving forward)</li><li>e : jump to the end of the current word</li><li>0 : go to the beginning of the line (without entering insert mode)</li><li>$ : go to the end of line (without entering insert mode)</li></ul> | Moving across text |  |
   | <ul><li>dw : deletes a word in front of cursor position</li><li><number x>dw : deletes x many words in front</li><li>d0 : delete everything until the start of line</li><li>d$ : delete everything until end of line</li></ul> | Combining vim commands examples |  |
 | These all can be ci<something>, di<something, yi<something> <ul><li>diw : deletes the word</li><li>ciw : changes the word</li><li>yiw : copy the word you are inside of</li><li>di" : deletes everything inside two quotation marks</li><li>ci" : changes everything inside two quotation marks</li><li>yi" : copy everything inside quotes</li></ul> | Options when inside a word (cursor is like in the l part of hello) |  |
+  | <ul><li>bruh</li><li>why doesn't this work</li><li>i hate this</li></ul> | bruh moment |  |
 
 
 ## Insert Mode
