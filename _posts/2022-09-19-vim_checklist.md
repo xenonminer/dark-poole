@@ -12,7 +12,7 @@ When entering into vim, you enter normal mode. Command mode is where most of the
 | Command | Description | Example |
 |---|---|---|
 | Esc | Entering normal mode (if not already in) |  |
-| <ul><li>:w : write to the file</li><li>:q : quit the file if nothing written</li><li>:q! : force quit even with written text</li></ul> | quitting/writing to vim |  |
+| :w : write to the file<br />:q : quit the file if nothing written<br />:q! : force quit even with written text<br /> | quitting/writing to vim |  |
 | :!<command> | Running shell commands from vim |  |
 | <ul><li>:set number : normal line numbers</li><li>:set relativenumber : line numbers are relative</li></ul> | Make vim have line numbers |  |
 | Ex: 5<arrow key down> (goes 5 lines down) | Typing a number x before a vim command makes you do that command x many times |  |
