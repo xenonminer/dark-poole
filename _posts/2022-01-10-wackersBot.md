@@ -18,7 +18,7 @@ Some examples of the bot:
 
 ![profile](https://user-images.githubusercontent.com/46347858/191702676-4c64288c-1781-466e-be5f-2b19642d2e2c.png)
 
-![challenges](https://user-images.githubusercontent.com/46347858/191700988-05d0b3ae-c777-44ab-ad0f-b9246e2a707c.png)
+![challenges](https://user-images.githubusercontent.com/46347858/191703042-ea5c7193-0788-40e0-98c2-273c0a157609.png)
 
 ![challenge](https://user-images.githubusercontent.com/46347858/191701079-0b2e1da0-9bb6-4190-92be-2e115751cb7c.png)
 
