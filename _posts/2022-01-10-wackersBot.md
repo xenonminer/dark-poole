@@ -22,5 +22,5 @@ Some examples of the bot:
 
 ![challenge](https://user-images.githubusercontent.com/46347858/191701079-0b2e1da0-9bb6-4190-92be-2e115751cb7c.png)
 
-![leaderboard](https://user-images.githubusercontent.com/46347858/191701199-3b974fff-2939-405c-b640-22a6a03918b2.png)
+![leaderboard](https://user-images.githubusercontent.com/46347858/191703381-23e7234e-0d88-49f6-9540-3b18af806d10.png)
 
