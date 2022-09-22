@@ -24,3 +24,6 @@ Some examples of the bot:
 
 ![leaderboard](https://user-images.githubusercontent.com/46347858/191703381-23e7234e-0d88-49f6-9540-3b18af806d10.png)
 
+To use the bot:
+Add your discord generated bot token to the bot.run replacing "no" with the token.
+
