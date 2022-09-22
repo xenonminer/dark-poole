@@ -10,7 +10,9 @@ It can be easily adapted to provide more functionalities to your liking.
 
 To look at the list of commands and other useful resources !help can be used
 
-![help](https://user-images.githubusercontent.com/46347858/191700654-0e64c652-2cbf-49ab-8d74-dc125a455002.png)
+![help1](https://user-images.githubusercontent.com/46347858/191701504-f187ee7a-0deb-4d32-9a44-1b06072bf96e.png)
+
+![help2](https://user-images.githubusercontent.com/46347858/191700654-0e64c652-2cbf-49ab-8d74-dc125a455002.png)
 
 Some examples of the bot:
 
