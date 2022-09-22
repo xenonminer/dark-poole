@@ -16,7 +16,7 @@ To look at the list of commands and other useful resources !help can be used
 
 Some examples of the bot:
 
-![profile](https://user-images.githubusercontent.com/46347858/191700912-c0a36766-6096-4445-8045-26e90427a7d6.png)
+![profile](https://user-images.githubusercontent.com/46347858/191702676-4c64288c-1781-466e-be5f-2b19642d2e2c.png)
 
 ![challenges](https://user-images.githubusercontent.com/46347858/191700988-05d0b3ae-c777-44ab-ad0f-b9246e2a707c.png)
 
