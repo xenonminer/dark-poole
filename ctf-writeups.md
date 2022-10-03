@@ -20,3 +20,4 @@ title: CTF Writeups
 | [MHSCTF 2022](_posts/2022-02-25-MHSCTF2022.md) | Crypto, Forensics, General, Rev, Web |
 | [CSAW 2022](_posts/2022-09-11-csaw2022.md) | Web |
 | [DownUnderCTF 2022](_posts/2022-09-26-DownUnderCTF2022.md) | Rev, Pwn, DFIR |
+| [WRECKCTF 2022](_posts/2022-10-03-WRECKCTF2022.md) | Rev |
