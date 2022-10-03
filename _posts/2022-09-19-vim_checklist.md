@@ -40,17 +40,27 @@ Insert mode will be used to do all the typing/programming.
 
 | Command | Description | Example |
 |---|---|---|
-
+| i : type before where the highlighted cursor<br />a : type after the highlighted cursor<br />o : create a new line below and enter insert mode<br />Shift + i : go to beginning of current line and enter insert mode<br />Shift + a : go to end of current line and enter insert mode<br />Shift + o : create a new line above and enter insert mode | Entering Insert Mode |  |
+  
 ## Visual Mode
 
 Visual mode will be used to do different things to characters/lines of text.
 
 | Command | Description | Example |
 |---|---|---|
+| v | Enter Visual Mode |  |
+| Arrow keys | Select text |  |
+| d | Delete selected text |  |
+| c | Deletes selected text and enters insert mode where cursor is |  }
+| y : yank/copy the text<br />p (in normal mode) : paste the text | Copy/Paste selected text |  |
+| Shift + v | Visual Line mode (only select lines) |  |
+| Ctrl + v | Visual Block mode (select by columns) |  |
+
 
 ## Other Useful Vim tricks
 
 These are some other random useful tricks that you might want to know when using vim.
 
-| Command | Description | Example |
+| Trick | Description | Example |
 |---|---|---|
+| ~/.vimrc | Vim config file so you don't have to type configs everytime |  |
