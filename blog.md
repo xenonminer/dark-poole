@@ -12,3 +12,4 @@ I will use this page to post about different pentesting methodologies, and some 
 | Post | Description |
 |---|---|
 | [Vim Checklist](_posts/2022-09-19-vim_checklist.md) | Everything vim that you will ever need! |
+| [Tmux Checklist](_posts/2022-10-03-tmux_checklist.md) | Cool tmux checklist for fast and organized navigation |
