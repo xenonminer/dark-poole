@@ -7,6 +7,7 @@ Cool tmux checklist with examples to become really fast with organized terminal 
 ## Checklist
 
 Prefix key is default ctrl+b
+
 | Command | Description | Example |
 |---|---|---|
 | tmux new -s (name) | Create a new session |  |
@@ -24,4 +25,4 @@ Prefix key is default ctrl+b
 | (prefix key) :source-file ~/.tmux.conf | To reset tmux configs from tmux |  |
 | (prefix key) x | To kill tmux session |  |
 | Ctrl + d | To kill tmux window |  |
-| (prefix key) left_bracket | Copy mode |  |
+| (prefix key) [ | Copy mode |  |
