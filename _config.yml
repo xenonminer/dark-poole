@@ -42,7 +42,7 @@ version: 3.0.0
 # Navbar page list
 nav:
   - title: Notes
-    url: https://xenon-cyber-docs.gitbook.io/
+    url: /notes
     
   - title: Blog
     url: /blog
