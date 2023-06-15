@@ -47,15 +47,15 @@ I will use 4 examples of vulnerabilities you can setup. **(Don't limit yourself 
 
 1. Adding an unauthorized user onto the system
     - ```sudo adduser username```
-    - Example: gif_here
+    - Example: ![gif]()
 2. Modifying the GUI Software & Updates Settings
-    - Example: gif_here
+    - Example: ![gif]()
 3. Installing a malicious package
     - ```sudo apt install package```
-    - Example: gif_here
+    - Example: ![gif]()
 4. Adding a malicious file
     - ```touch /path/to/random/directory/file```
-    - Example: gif_here
+    - Example: ![gif]()
 
 During this step, you also want to create the README, Forensics Questions, and the "Set Name for Scoring Report" file. Create these files all on the Desktop for your main user.
 
@@ -149,7 +149,9 @@ Basically with these checks, you are just trying to find the result and see if i
 Now that you have added all the vulns into the engine, you want to encrypt the engine to make sure no one can easily read the vulns.
 
 Encryption process:
-Since pyconcrete should already be installed from earlier, you can now run ```pyconcrete-admin.py compile --source=/opt/temp --pye pyconcrete engine.pye``` to encrypt the engine.py into a engine.pye.
+Since pyconcrete should already be installed from earlier, you can now run
+```pyconcrete-admin.py compile --source=/opt/temp --pye pyconcrete engine.pye```
+to encrypt the engine.py into a engine.pye.
 
 Now you want to save the original engine.py onto your Google Drive/Github just in case you want to make engine edits later. **There will most likely be bugs with the engine the first time around, so please do this!**
 
