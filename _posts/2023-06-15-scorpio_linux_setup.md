@@ -147,7 +147,7 @@ ExecStart=pyconcrete /opt/temp/engine.pye
 WantedBy=multi-user.target
 ```
 
-3. Enable the service:
+Finally, enable the service:
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable engine
