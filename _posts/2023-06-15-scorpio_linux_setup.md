@@ -20,7 +20,7 @@ The image creator (you) will implement vulnerabilities onto a virtual machine an
 ## Tools
 
 Before you get started, these are some important tools to make the setup process quicker
-- Install python2 ```sudo apt install python2 -y```
+- Install python2 <pre><code>sudo apt install python2 -y</code></pre>
 - Install pip ```sudo apt install python3-pip -y```
 - Install git ```sudo apt install git -y```
 
