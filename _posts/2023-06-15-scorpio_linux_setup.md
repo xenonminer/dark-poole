@@ -47,15 +47,15 @@ I will use 4 examples of vulnerabilities you can setup. **(Don't limit yourself 
 
 1. Adding an unauthorized user onto the system
     - ```sudo adduser username```
-    - Example: ![gif]()
+    - Example: ![unauthuseradd](https://github.com/xenonminer/xenonminer.github.io/assets/46347858/7b540450-2b31-4f69-b3cf-68cd9eb850e6)
 2. Modifying the GUI Software & Updates Settings
-    - Example: ![gif]()
+    - Example: 
 3. Installing a malicious package
     - ```sudo apt install package```
-    - Example: ![gif]()
+    - Example: ![hashcatinstall](https://github.com/xenonminer/xenonminer.github.io/assets/46347858/2facee6e-ebef-45c1-8fa1-732b31ff6798)
 4. Adding a malicious file
     - ```touch /path/to/random/directory/file```
-    - Example: ![gif]()
+    - Example: ![touchfile](https://github.com/xenonminer/xenonminer.github.io/assets/46347858/6b8b7e42-2a37-4d52-bf5e-bd4716cc2741)
 
 During this step, you also want to create the README, Forensics Questions, and the "Set Name for Scoring Report" file. Create these files all on the Desktop for your main user.
 
