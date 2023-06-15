@@ -96,7 +96,41 @@ Then, this repository will need to be in /opt with the name temp: ```sudo mv sco
 
 ### Step 4: Adding vulnerabilities to the engine
 
+After you have added the vulnerabilities on the system, you want to configure them being checked in the actual engine.
 
+Navigate to **/opt/temp/** and open up **engine.py**
+
+The lines you want to change are the ones that look like: 
+```py
+vulns.append(newCommandObject('cat /home/kaisa/Desktop/Forensics_1.txt', 'Valoran City Park', True, 6, 'Forensics Question 1 correct'))
+```
+
+These lines add a vuln object in with their specific parameters. Going left to right the parameters are:
+- the command to check the vuln
+- the result of that command
+- If the command was checked for that value, put True. If it was checked for not being that value, put False.
+- Number of points assigned for that vulnerability
+- Scoring Report message
+
+To explain the 4 vulns from earlier that we setup, they would potentially look like this
+1. Checking for unauthorized user deletion (user will be bob): 
+    ```py
+    vulns.append(newCommandObject('cat /etc/passwd | grep -v "#" | grep bob | wc -l', '1', False, 5, 'Removed unauthorized user bob'))
+    ```
+2. Fixing GUI Software & Updates Settings
+    ```py
+    vulns.append(newCommandObject('cat /etc/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Update-Package-Lists" | grep "1" | wc -l', '1', True, 5, 'Daily updates enabled'))
+    ```
+3. Checking for a deleted package
+    ```py
+    vulns.append(newCommandObject('apt list --installed hashcat', 'installed', False, 5, 'Prohibited software hashcat removed'))
+    ```
+4. Checking for a deleted file
+    ```py
+    vulns.append(newCommandObject('ls /home/bob/.passwords.txt | wc -l', '0', True, 5, 'Removed plaintext password file'))
+    ```
+
+Basically with these checks, you are just trying to find the result and see if it's there or not and modify the newCommandObject based on that.
 
 ### Step 5: Encrypting the engine
 
@@ -130,24 +164,24 @@ Steps to create the **engine** service:
     - WantedBy=multi-user.target
 
 Contents will look like this
-```bash
-[Unit]
-Description=Scoring Engine
-After=network.target
-StartLimitIntervalSec=0
+    ```bash
+    [Unit]
+    Description=Scoring Engine
+    After=network.target
+    StartLimitIntervalSec=0
 
-[Service]
-Type=simple
-Restart=always
-RestartSec=1
-User=root
-ExecStart=pyconcrete /opt/temp/engine.pye
+    [Service]
+    Type=simple
+    Restart=always
+    RestartSec=1
+    User=root
+    ExecStart=pyconcrete /opt/temp/engine.pye
 
-[Install]
-WantedBy=multi-user.target
-```
+    [Install]
+    WantedBy=multi-user.target
+    ```
 
-Finally, enable the service:
+3. Enable the service:
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable engine
