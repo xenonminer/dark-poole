@@ -49,7 +49,7 @@ I will use 4 examples of vulnerabilities you can setup. **(Don't limit yourself 
     - ```sudo adduser username```
     - Example: ![unauthuseradd](https://github.com/xenonminer/xenonminer.github.io/assets/46347858/7b540450-2b31-4f69-b3cf-68cd9eb850e6)
 2. Modifying the GUI Software & Updates Settings
-    - Example: 
+    - Example: ![guisandu](https://github.com/xenonminer/xenonminer.github.io/assets/46347858/0747bcfb-0e37-473d-b0d7-3699c728ad17)
 3. Installing a malicious package
     - ```sudo apt install package```
     - Example: ![hashcatinstall](https://github.com/xenonminer/xenonminer.github.io/assets/46347858/2facee6e-ebef-45c1-8fa1-732b31ff6798)
