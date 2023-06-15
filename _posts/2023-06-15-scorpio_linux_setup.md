@@ -150,7 +150,9 @@ Now that you have added all the vulns into the engine, you want to encrypt the e
 
 Encryption process:
 Since pyconcrete should already be installed from earlier, you can now run
-    ```pyconcrete-admin.py compile --source=/opt/temp --pye pyconcrete engine.pye```
+
+```pyconcrete-admin.py compile --source=/opt/temp --pye pyconcrete engine.pye```
+
 to encrypt the engine.py into a engine.pye.
 
 Now you want to save the original engine.py onto your Google Drive/Github just in case you want to make engine edits later. **There will most likely be bugs with the engine the first time around, so please do this!**
