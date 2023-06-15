@@ -13,16 +13,17 @@ Scorpio is a Python based scoring engine created to score images and their vulne
 
 ## How does Scorpio work?
 
-The image creator (you) will implement vulnerabilities onto a virtual machine and record them onto engine.py, which runes every 30 seconds. As the students secure the system, the scoring engine will update Template.html (Scoring Report) to display the fixed vulnerabilities.
+The image creator (you) will implement vulnerabilities onto a virtual machine and record them onto engine.py, which runs every 30 seconds. As the students secure the system, the scoring engine will update Template.html (Scoring Report) to display the fixed vulnerabilities.
 
 # Instructions for setup
 
 ## Tools
 
 Before you get started, these are some important tools to make the setup process quicker
-- Install python2 <pre><code>sudo apt install python2 -y</code></pre>
-- Install pip ```sudo apt install python3-pip -y```
-- Install git ```sudo apt install git -y```
+- Install python2: ```sudo apt install python2 -y```
+- Install pip: ```sudo apt install python3-pip -y```
+- Install pyconcrete: ```sudo PYCONCRETE_PASSPHRASE=password_here pip install pyconcrete```
+- Install git: ```sudo apt install git -y```
 
 ## Steps
 
@@ -54,7 +55,13 @@ I will use 4 examples of vulnerabilities you can setup. **(Don't limit yourself 
     - ```touch /path/to/random/directory/file```
     - Example: gif_here
 
-During this step, you also want to create the Forensics Questions and the "Set Name for Scoring Report" file. Create these files all on the Desktop for your main user.
+During this step, you also want to create the README, Forensics Questions, and the "Set Name for Scoring Report" file. Create these files all on the Desktop for your main user.
+
+The README should be setup in Google Docs (Preferably). [Here is an example README for use](https://docs.google.com/document/d/1M4mljp9yEzb5GLsibm0Z7RqTzpiPQalwZlfn4i8nixo)
+After creating the README, download the README as a pdf onto the system and rename it to README.pdf. Then move it onto the Desktop.
+```bash
+mv ~/Downloads/README_download ~/Desktop/README.pdf
+```
 
 The Forensics will be in the format "Forensics_#.txt". Create them using the command ```touch Forensics_#.txt```. Format of forensics will be:
 ```
@@ -93,11 +100,71 @@ Then, this repository will need to be in /opt with the name temp: ```sudo mv sco
 
 ### Step 5: Encrypting the engine
 
+Now that you have added all the vulns into the engine, you want to encrypt the engine to make sure no one can easily read the vulns.
 
+Encryption process:
+Since pyconcrete should already be installed from earlier, you can now run ```pyconcrete-admin.py compile --source=/opt/temp --pye pyconcrete engine.pye``` to encrypt the engine.py into a engine.pye.
+
+Now you want to save the original engine.py onto your Google Drive/Github just in case you want to make engine edits later. **There will most likely be bugs with the engine the first time around, so please do this!**
+
+Then, delete the original engine.py from /opt/temp/ to make sure no one can directly see the vulns.
 
 ### Step 6: Setting up the engine service
 
+After encrypting the engine, you want to make the engine a service so that it runs forever. (as long as it's not disabled/stopped)
 
+Steps to create the **engine** service:
+1. Create file **/lib/systemd/system/engine.service**: ```sudo nano /lib/systemd/system/engine.service```
+2. Add contents
+    - [Unit]
+    - Description=Scoring Engine 
+    - After=network.target 
+    - StartLimitIntervalSec=0
+    - [Service]
+    - Type=simple 
+    - Restart=always 
+    - RestartSec=1 
+    - User=root 
+    - ExecStart=pyconcrete /opt/temp/engine.pye
+    - [Install] 
+    - WantedBy=multi-user.target
+Contents will look like this
+```
+[Unit]
+Description=Scoring Engine
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=pyconcrete /opt/temp/engine.pye
+
+[Install]
+WantedBy=multi-user.target
+```
+3. Enable the service:
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable engine
+reboot
+sudo systemctl status engine
+```
 
 ### Step 7: Powering Off and Exporting
 
+After setting up the engine service, the image is basically fully created with the vulnerabilities and the scoring engine.
+
+Now you just want to power it off, export it, then test the image.
+
+After powering off the image, go into the settings and modify the **Memory** to 4 GB and **Processors** to 2 GB. Also modify the image name to the theme of the image.
+
+To export the image, you can just zip up the entire image directory using 7zip.
+
+Then share the image!
+
+### Step 8: Testing the Image
+
+Download, Extract, Run the Image, and test out every vulnerability to make sure the scoring works properly
