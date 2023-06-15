@@ -165,22 +165,22 @@ Steps to create the **engine** service:
 
 Contents will look like this
 
-    ```bash
-    [Unit]
-    Description=Scoring Engine
-    After=network.target
-    StartLimitIntervalSec=0
+```bash
+[Unit]
+Description=Scoring Engine
+After=network.target
+StartLimitIntervalSec=0
 
-    [Service]
-    Type=simple
-    Restart=always
-    RestartSec=1
-    User=root
-    ExecStart=pyconcrete /opt/temp/engine.pye
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=pyconcrete /opt/temp/engine.pye
 
-    [Install]
-    WantedBy=multi-user.target
-    ```
+[Install]
+WantedBy=multi-user.target
+```
 
 3. Enable the service:
 ```bash
