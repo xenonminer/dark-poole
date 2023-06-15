@@ -102,7 +102,9 @@ Navigate to **/opt/temp/** and open up **engine.py**
 
 The lines you want to change are the ones that look like: 
 ```py
-vulns.append(newCommandObject('cat /home/kaisa/Desktop/Forensics_1.txt', 'Valoran City Park', True, 6, 'Forensics Question 1 correct'))
+vulns.append(newCommandObject(
+    'cat /home/kaisa/Desktop/Forensics_1.txt', 'Valoran City Park', 
+    True, 6, 'Forensics Question 1 correct'))
 ```
 
 These lines add a vuln object in with their specific parameters. Going left to right the parameters are:
@@ -115,19 +117,27 @@ These lines add a vuln object in with their specific parameters. Going left to r
 To explain the 4 vulns from earlier that we setup, they would potentially look like this
 1. Checking for unauthorized user deletion (user will be bob): 
     ```py
-    vulns.append(newCommandObject('cat /etc/passwd | grep -v "#" | grep bob | wc -l', '1', False, 5, 'Removed unauthorized user bob'))
+    vulns.append(newCommandObject(
+        'cat /etc/passwd | grep -v "#" | grep bob | wc -l', 
+        '1', False, 5, 'Removed unauthorized user bob'))
     ```
 2. Fixing GUI Software & Updates Settings
     ```py
-    vulns.append(newCommandObject('cat /etc/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Update-Package-Lists" | grep "1" | wc -l', '1', True, 5, 'Daily updates enabled'))
+    vulns.append(newCommandObject(
+        'cat /etc/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Update-Package-Lists" | grep "1" | wc -l', 
+        '1', True, 5, 'Daily updates enabled'))
     ```
 3. Checking for a deleted package
     ```py
-    vulns.append(newCommandObject('apt list --installed hashcat', 'installed', False, 5, 'Prohibited software hashcat removed'))
+    vulns.append(newCommandObject(
+        'apt list --installed hashcat', 'installed', 
+        False, 5, 'Prohibited software hashcat removed'))
     ```
 4. Checking for a deleted file
     ```py
-    vulns.append(newCommandObject('ls /home/bob/.passwords.txt | wc -l', '0', True, 5, 'Removed plaintext password file'))
+    vulns.append(newCommandObject(
+        'ls /home/bob/.passwords.txt | wc -l', '0', 
+        True, 5, 'Removed plaintext password file'))
     ```
 
 Basically with these checks, you are just trying to find the result and see if it's there or not and modify the newCommandObject based on that.
@@ -182,7 +192,7 @@ ExecStart=pyconcrete /opt/temp/engine.pye
 WantedBy=multi-user.target
 ```
 
-3. Enable the service:
+Finally, enable the service:
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable engine
