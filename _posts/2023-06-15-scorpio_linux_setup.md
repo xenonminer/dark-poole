@@ -17,6 +17,8 @@ The image creator (you) will implement vulnerabilities onto a virtual machine an
 
 # Instructions for setup
 
+If have already created the image and its vulns or just want to know how to setup the Scorpio Engine for Linux, [jump directly to Scorpio Setup](#step-3-cloning-scorpio-repository-into-the-system--setting-up-directories)
+
 ## Tools
 
 Before you get started, these are some important tools to make the setup process quicker
@@ -109,7 +111,7 @@ vulns.append(newCommandObject(
 
 These lines add a vuln object in with their specific parameters. Going left to right the parameters are:
 - the command to check the vuln
-- the result of that command
+- what to check for in the result of the command
 - If the command was checked for that value, put True. If it was checked for not being that value, put False.
 - Number of points assigned for that vulnerability
 - Scoring Report message
