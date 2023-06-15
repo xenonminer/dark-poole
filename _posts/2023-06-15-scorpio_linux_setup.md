@@ -128,8 +128,9 @@ Steps to create the **engine** service:
     - ExecStart=pyconcrete /opt/temp/engine.pye
     - [Install] 
     - WantedBy=multi-user.target
+
 Contents will look like this
-```
+```bash
 [Unit]
 Description=Scoring Engine
 After=network.target
@@ -145,6 +146,7 @@ ExecStart=pyconcrete /opt/temp/engine.pye
 [Install]
 WantedBy=multi-user.target
 ```
+
 3. Enable the service:
 ```bash
 sudo systemctl daemon-reload
