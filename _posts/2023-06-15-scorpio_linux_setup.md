@@ -101,7 +101,7 @@ Clone the engine repository: ```git clone https://github.com/troy-cyber/scorpio.
 
 After cloning the repository and setting up the directories, you want to set up the engine.
 
-First, change the imageName at the top of the file so it fits your image. This name will be displayed at the top of the Scoring Report.
+First, change the imageName at the top of engine.py so it fits your image. This name will be displayed at the top of the Scoring Report.
 
 Then, change all occurences of kaisa to your main user's username.
 
