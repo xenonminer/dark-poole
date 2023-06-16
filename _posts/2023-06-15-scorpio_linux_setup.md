@@ -79,12 +79,11 @@ Other things you want to configure are:
     ```
 - Autologin for your main user with gdm3
   - To set this up with ```joe```, edit the **/etc/gdm3/custom.conf**
-  Then edit lines to look like the following:
+  Then uncommit and edit the following lines to look like this:
   ```bash
   AutomaticLoginEnable=True
   AutomaticLogin=joe
   ``` 
-  Make sure the lines are uncommented.
 
 ### Step 3: Cloning Scorpio Repository into the system + Setting up directories
 
@@ -96,9 +95,9 @@ Install these tools on the image:
 - pyconcrete: ```sudo PYCONCRETE_PASSPHRASE=password_here pip install pyconcrete```
 - git: ```sudo apt install git -y```
 
-Then, clone the engine repository: ```git clone https://github.com/Cybertron51/scorpio.git```. This repository will need to be in **/opt** with the name **temp**: ```sudo mv scorpio /opt/temp```
+Then, create a directory named **temp** in **/opt**. Clone the engine repository in this directory: ```git clone https://github.com/Cybertron51/scorpio.git```.
 
-### Step 4: Adding vulnerabilities to the engine
+### Step 4: Checking Vulnerabilities with the Engine
 
 After you have added the vulnerabilities, you want to configure them to be checked in the actual engine.
 
