@@ -19,14 +19,6 @@ The image creator (you) will implement vulnerabilities onto a virtual machine an
 
 If you have already created the image and its vulns or only want to know how to set up the Scorpio Engine for Linux, [jump directly to Scorpio Setup](#step-3-cloning-scorpio-repository-into-the-system--setting-up-directories).
 
-## Tools
-
-Before you get started, install these tools:
-- python2: ```sudo apt install python2 -y```
-- pip: ```sudo apt install python3-pip -y```
-- pyconcrete: ```sudo PYCONCRETE_PASSPHRASE=password_here pip install pyconcrete```
-- git: ```sudo apt install git -y```
-
 ## Steps
 
 ### Step 1: Open/Create a Sandbox Virtual Machine
@@ -87,22 +79,25 @@ Other things you want to configure are:
     ```
 - Autologin for your main user with gdm3
   - To set this up with ```joe```, edit the **/etc/gdm3/custom.conf**
-  Then edit lines to look like the following:
+  Then uncommit and edit the following lines to look like this:
   ```bash
   AutomaticLoginEnable=True
   AutomaticLogin=joe
   ``` 
-  Make sure the lines are uncommented.
 
 ### Step 3: Cloning Scorpio Repository into the system + Setting up directories
 
 After adding all the vulnerabilities, you can start setting up the engine.
 
-First, clone the engine repository: ```git clone https://github.com/Cybertron51/scorpio.git```.
+Install these tools on the image:
+- python2: ```sudo apt install python2 -y```
+- pip: ```sudo apt install python3-pip -y```
+- pyconcrete: ```sudo PYCONCRETE_PASSPHRASE=password_here pip install pyconcrete```
+- git: ```sudo apt install git -y```
 
-Then, this repository will need to be in **/opt** with the name **temp**: ```sudo mv scorpio /opt/temp```
+Then, create a directory named **temp** in **/opt**. Clone the engine repository in this directory: ```git clone https://github.com/Cybertron51/scorpio.git```.
 
-### Step 4: Adding vulnerabilities to the engine
+### Step 4: Checking Vulnerabilities with the Engine
 
 After you have added the vulnerabilities, you want to configure them to be checked in the actual engine.
 
