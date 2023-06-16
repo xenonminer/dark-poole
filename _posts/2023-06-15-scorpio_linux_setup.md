@@ -82,7 +82,8 @@ Other things you want to configure are:
 - Your main user's **.bash_history file** and root's **.bash_history** file. This clears your bash history permanently so students can't figure out what commands you ran.
   - To do this with example user ```joe```, run the commands
     ```bash
-    rm -rf /home/joe/.bash_history; ln -s /dev/null /home/joe/.bash_history; sudo rm -rf /root/.bash_history; sudo ln -s /dev/null /root/.bash_history
+    rm -rf /home/joe/.bash_history; ln -s /dev/null /home/joe/.bash_history
+    sudo rm -rf /root/.bash_history; sudo ln -s /dev/null /root/.bash_history
     ```
 - Autologin for your main user with gdm3
   - To set this up with ```joe```, edit the **/etc/gdm3/custom.conf**
