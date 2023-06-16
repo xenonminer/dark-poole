@@ -164,22 +164,22 @@ After encrypting the engine, you want to make the engine a service so that it ru
 Steps to create the **engine** service:
 1. Create file **/lib/systemd/system/engine.service**: ```sudo nano /lib/systemd/system/engine.service```
 2. Copy and paste the following into the file:
-```bash
-[Unit]
-Description=Scoring Engine
-After=network.target
-StartLimitIntervalSec=0
-
-[Service]
-Type=simple
-Restart=always
-RestartSec=1
-User=root
-ExecStart=pyconcrete /opt/temp/engine.pye
-
-[Install]
-WantedBy=multi-user.target
-```
+  ```bash
+  [Unit]
+  Description=Scoring Engine
+  After=network.target
+  StartLimitIntervalSec=0
+  
+  [Service]
+  Type=simple
+  Restart=always
+  RestartSec=1
+  User=root
+  ExecStart=pyconcrete /opt/temp/engine.pye
+  
+  [Install]
+  WantedBy=multi-user.target
+  ```
 Finally, enable the service:
 ```bash
 sudo systemctl daemon-reload
