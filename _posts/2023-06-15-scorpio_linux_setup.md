@@ -95,7 +95,7 @@ Install these tools on the image:
 - pyconcrete: ```sudo PYCONCRETE_PASSPHRASE=password_here pip install pyconcrete```
 - git: ```sudo apt install git -y```
 
-Then, create a directory named **temp** in **/opt**. Clone the engine repository in this directory: ```git clone https://github.com/Cybertron51/scorpio.git```.
+Clone the engine repository: ```git clone https://github.com/troy-cyber/scorpio.git``` and rename it to the ```/opt/temp``` directory with ```mv scorpio /opt/temp```.
 
 ### Step 4: Checking Vulnerabilities with the Engine
 
