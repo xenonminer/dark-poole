@@ -95,7 +95,7 @@ Install these tools on the image:
 - pyconcrete: ```sudo PYCONCRETE_PASSPHRASE=password_here pip install pyconcrete```
 - git: ```sudo apt install git -y```
 
-Then, create a directory named **temp** in **/opt**. Clone the engine repository in this directory: ```git clone https://github.com/Cybertron51/scorpio.git```.
+Clone the engine repository: ```git clone https://github.com/troy-cyber/scorpio.git``` and rename it to the ```/opt/temp``` directory with ```mv scorpio /opt/temp```.
 
 ### Step 4: Checking Vulnerabilities with the Engine
 
@@ -162,23 +162,8 @@ Then, delete the original **engine.py** from **/opt/temp/** to make sure no one 
 After encrypting the engine, you want to make the engine a service so that it runs forever (as long as it's not disabled/stopped).
 
 Steps to create the **engine** service:
-1. Create file ```/lib/systemd/system/engine.service```: ```sudo nano /lib/systemd/system/engine.service```
-2. Add contents
-    - [Unit]
-    - Description=Scoring Engine 
-    - After=network.target 
-    - StartLimitIntervalSec=0
-    - [Service]
-    - Type=simple 
-    - Restart=always 
-    - RestartSec=1 
-    - User=root 
-    - ExecStart=pyconcrete /opt/temp/engine.pye
-    - [Install] 
-    - WantedBy=multi-user.target
-
-Contents will look like this
-
+1. Create file **/lib/systemd/system/engine.service**: ```sudo nano /lib/systemd/system/engine.service```
+2. Copy and paste the following into the file:
 ```bash
 [Unit]
 Description=Scoring Engine
@@ -195,7 +180,6 @@ ExecStart=pyconcrete /opt/temp/engine.pye
 [Install]
 WantedBy=multi-user.target
 ```
-
 Finally, enable the service:
 ```bash
 sudo systemctl daemon-reload
@@ -206,16 +190,14 @@ sudo systemctl status engine
 
 ### Step 7: Powering Off and Exporting
 
-After setting up the engine service, the image is basically fully created with the vulnerabilities and the scoring engine.
+After setting up the engine service, the image is fully created with the vulnerabilities and the scoring engine.
 
-Now you just want to power it off, export it, then test the image.
+Power off the image. After powering off the image, go into the settings and modify the **Memory** to 4 GB and **Processors** to 2 GB. Also modify the image name to the theme of the image.
 
-After powering off the image, go into the settings and modify the **Memory** to 4 GB and **Processors** to 2 GB. Also modify the image name to the theme of the image.
-
-To export the image, you can just zip up the entire image directory using **7zip**.
+Zip up the entire image directory with **7zip** to a new zip file.
 
 ### Step 8: Testing the Image
 
-Download, Extract, Run the Image, and test out every vulnerability to make sure the scoring works properly.
+Optimally, have someone else extract the zip file, run the Image, and test every vulnerability to make sure the scoring works properly.
 
-Good luck!
+Hope this helps!
