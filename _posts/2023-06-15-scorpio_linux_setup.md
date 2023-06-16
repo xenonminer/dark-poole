@@ -19,14 +19,6 @@ The image creator (you) will implement vulnerabilities onto a virtual machine an
 
 If you have already created the image and its vulns or only want to know how to set up the Scorpio Engine for Linux, [jump directly to Scorpio Setup](#step-3-cloning-scorpio-repository-into-the-system--setting-up-directories).
 
-## Tools
-
-Before you get started, install these tools:
-- python2: ```sudo apt install python2 -y```
-- pip: ```sudo apt install python3-pip -y```
-- pyconcrete: ```sudo PYCONCRETE_PASSPHRASE=password_here pip install pyconcrete```
-- git: ```sudo apt install git -y```
-
 ## Steps
 
 ### Step 1: Open/Create a Sandbox Virtual Machine
@@ -98,9 +90,13 @@ Other things you want to configure are:
 
 After adding all the vulnerabilities, you can start setting up the engine.
 
-First, clone the engine repository: ```git clone https://github.com/Cybertron51/scorpio.git```.
+Install these tools on the image:
+- python2: ```sudo apt install python2 -y```
+- pip: ```sudo apt install python3-pip -y```
+- pyconcrete: ```sudo PYCONCRETE_PASSPHRASE=password_here pip install pyconcrete```
+- git: ```sudo apt install git -y```
 
-Then, this repository will need to be in **/opt** with the name **temp**: ```sudo mv scorpio /opt/temp```
+Then, clone the engine repository: ```git clone https://github.com/Cybertron51/scorpio.git```. This repository will need to be in **/opt** with the name **temp**: ```sudo mv scorpio /opt/temp```
 
 ### Step 4: Adding vulnerabilities to the engine
 
