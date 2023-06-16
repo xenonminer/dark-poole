@@ -164,6 +164,7 @@ After encrypting the engine, you want to make the engine a service so that it ru
 Steps to create the **engine** service:
 1. Create file **/lib/systemd/system/engine.service**: ```sudo nano /lib/systemd/system/engine.service```
 2. Copy and paste the following into the file:
+
   ```bash
   [Unit]
   Description=Scoring Engine
@@ -180,6 +181,7 @@ Steps to create the **engine** service:
   [Install]
   WantedBy=multi-user.target
   ```
+
 Finally, enable the service:
 ```bash
 sudo systemctl daemon-reload
