@@ -149,7 +149,7 @@ With these checks, you are trying to find the result to see if it's there and mo
 
 Now, you want to encrypt the engine to make sure no one can read the vulns. Since pyconcrete should already be installed, you can now run:
 ```py
-pyconcrete-admin.py compile --source=/opt/temp --pye pyconcrete engine.pye
+pyconcrete-admin.py compile --source=/opt/temp --pye
 ```
 to encrypt the **engine.py** into a **engine.pye**.
 
