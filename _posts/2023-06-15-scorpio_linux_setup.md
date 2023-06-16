@@ -5,7 +5,7 @@ title: Scorpio Linux Setup
 
 # Description
 
-In this blog post, you will learn how to setup the [Scorpio Scoring Engine](https://github.com/Cybertron51/scorpio) for Linux OSes.
+In this blog post, you will learn how to setup the [Scorpio Scoring Engine](https://github.com/troy-cyber/scorpio) for Linux OSes.
 
 ## What is Scorpio?
 
