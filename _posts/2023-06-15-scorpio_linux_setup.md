@@ -17,7 +17,7 @@ The image creator (you) will implement vulnerabilities onto a virtual machine an
 
 # Instructions for setup
 
-If you have already created the image and its vulns or only want to know how to set up the Scorpio Engine for Linux, [jump directly to Scorpio Setup](#step-3-cloning-scorpio-repository-into-the-system--setting-up-directories).
+If you have already created the image with vulnerabilities and want to jump to Scorpio setup, [click here](#step-3-cloning-scorpio-repository-into-the-system--setting-up-directories).
 
 ## Steps
 
@@ -31,7 +31,7 @@ Then run the image by clicking the play button.
 
 ### Step 2: Setting up/Implementing Vulnerabilities in the Image
 
-Now that you have the sandbox image open, you want to implement all your vulnerabilities in the image.
+Now that you have the sandbox image open, implement all your vulnerabilities in the image.
 
 Here's 4 examples of vulnerabilities you can set up.
 
@@ -71,7 +71,7 @@ YOUR FULL NAME: [id]
 ```
 The competitor/student completing the image will fill in the **id** upon opening the image. The **id** can be anything you choose.
 
-Other things you want to configure are:
+Other things to configure are:
 - Your main user's **.bash_history file** and root's **.bash_history** file. This clears your bash history permanently so students can't figure out what commands you ran.
   - To do this with example user ```joe```, run the commands
     ```bash
@@ -104,7 +104,7 @@ Clone the engine repository: ```git clone https://github.com/troy-cyber/scorpio.
 
 ### Step 4: Configuring the Engine
 
-After cloning the repository and setting up the directories, you want to set up the engine.
+After cloning the repository and setting up the directories, set up the engine.
 
 First, change the **imageName** at the top of **engine.py** so it fits your image. This name will be displayed at the top of the Scoring Report.
 
@@ -112,11 +112,11 @@ Then, change all occurences of ```kaisa``` to your main user's username.
 
 ### Step 5: Checking Vulnerabilities with the Engine
 
-After you have added the vulnerabilities, you want to configure them to be checked in the engine.
+After you have added the vulnerabilities, configure them to be checked in the engine.
 
 Navigate to **/opt/temp/** and open up **engine.py**.
 
-The lines you want to change are the ones that look like: 
+The lines to change are the ones that look like this: 
 ```py
 vulns.append(newCommandObject(
     'cat /home/kaisa/Desktop/Forensics_1.txt', 'Valoran City Park', 
@@ -160,19 +160,19 @@ With these checks, you are trying to find the result to see if it's there and mo
 
 ### Step 6: Encrypting the engine
 
-Now, you want to encrypt the engine to make sure no one can read the vulns. Since pyconcrete should already be installed, you can now run:
+We need to encrypt the engine to make sure no one can read the vulns. Since pyconcrete should already be installed, you can now run:
 ```py
 pyconcrete-admin.py compile --source=/opt/temp --pye
 ```
 to encrypt the **engine.py** into a **engine.pye**.
 
-Now you want to save the original engine.py onto your Google Drive/Github just in case you want to make engine edits later. **There will most likely be bugs with the engine the first time around, so please do this!**
+Now, save the original **engine.py** onto your Google Drive/Github just in case you need to make engine edits later. **There will most likely be bugs with the engine the first time around, so please do this!**
 
 Then, delete the original **engine.py** from **/opt/temp/** to make sure no one can directly see the vulns.
 
 ### Step 7: Setting up the engine service
 
-After encrypting the engine, you want to make the engine a service so that it runs forever (as long as it's not disabled/stopped).
+After encrypting the engine, make the engine a service so that it runs forever (as long as it's not disabled/stopped).
 
 Steps to create the **engine** service:
 1. Create file **/lib/systemd/system/engine.service**: ```sudo nano /lib/systemd/system/engine.service```
