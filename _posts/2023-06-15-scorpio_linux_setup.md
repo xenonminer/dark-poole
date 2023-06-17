@@ -214,3 +214,5 @@ Zip up the entire image directory with **7zip** to a new zip file. This may take
 Have someone else extract the zip file, run the image, and test every vulnerability to make sure the scoring works properly. Once you do that, you should have a working image!
 
 Hope this helps!
+
+edited by [prince-of-tennis](https://github.com/prince-of-tennis)
