@@ -69,19 +69,22 @@ Also, create the "Set Name for Scoring Report" on the Desktop of the main user: 
 ```
 YOUR FULL NAME: [id]
 ```
+The competitor/student completing the image will fill in the **id** upon opening the image. The **id** can be anything you choose.
 
 Other things you want to configure are:
 - Your main user's **.bash_history file** and root's **.bash_history** file. This clears your bash history permanently so students can't figure out what commands you ran.
   - To do this with example user ```joe```, run the commands
     ```bash
-    rm -rf /home/joe/.bash_history; ln -s /dev/null /home/joe/.bash_history
-    sudo rm -rf /root/.bash_history; sudo ln -s /dev/null /root/.bash_history
+    rm -rf /home/joe/.bash_history
+    ln -s /dev/null /home/joe/.bash_history
+    sudo rm -rf /root/.bash_history
+    sudo ln -s /dev/null /root/.bash_history
     ```
 - Autologin for your main user with gdm3
   - To set this up with ```joe```, edit the **/etc/gdm3/custom.conf**
-  Then uncommit and edit the following lines to look like this:
+  Then uncomment and edit the following lines to look like this:
   ```bash
-  AutomaticLoginEnable=True
+  AutomaticLoginEnable=true
   AutomaticLogin=joe
   ``` 
 
@@ -89,11 +92,13 @@ Other things you want to configure are:
 
 After adding all the vulnerabilities, you can start setting up the engine.
 
-Install these tools on the image:
-- python2: ```sudo apt install python2 -y```
-- pip: ```sudo apt install python3-pip -y```
-- pyconcrete: ```sudo PYCONCRETE_PASSPHRASE=password_here pip install pyconcrete```
-- git: ```sudo apt install git -y```
+Install python2, pip, pyconcrete, and git on the image:
+```bash
+sudo apt install python2 -y
+sudo apt install python3-pip -y
+sudo PYCONCRETE_PASSPHRASE=password_here pip install pyconcrete
+sudo apt install git -y
+```
 
 Clone the engine repository: ```git clone https://github.com/troy-cyber/scorpio.git``` and rename it to the ```/opt/temp``` directory with ```mv scorpio /opt/temp```.
 
