@@ -215,4 +215,4 @@ Have someone else extract the zip file, run the image, and test every vulnerabil
 
 Hope this helps!
 
-edited by [prince-of-tennis](https://github.com/prince-of-tennis)
+*edited by* [prince-of-tennis](https://github.com/prince-of-tennis)
