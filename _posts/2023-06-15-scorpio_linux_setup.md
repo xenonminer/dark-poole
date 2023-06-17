@@ -102,7 +102,15 @@ sudo apt install git -y
 
 Clone the engine repository: ```git clone https://github.com/troy-cyber/scorpio.git``` and rename it to the ```/opt/temp``` directory with ```mv scorpio /opt/temp```.
 
-### Step 4: Checking Vulnerabilities with the Engine
+### Step 4: Configuring the Engine
+
+After cloning the repository and setting up the directories, you want to set up the engine.
+
+First, change the imageName at the top of engine.py so it fits your image. This name will be displayed at the top of the Scoring Report.
+
+Then, change all occurences of kaisa to your main user's username.
+
+### Step 5: Checking Vulnerabilities with the Engine
 
 After you have added the vulnerabilities, you want to configure them to be checked in the actual engine.
 
@@ -150,7 +158,7 @@ The 4 vulns from earlier would look like this:
 
 With these checks, you are trying to find the result to see if it's there and modify the ```newCommandObject``` based on that.
 
-### Step 5: Encrypting the engine
+### Step 6: Encrypting the engine
 
 Now, you want to encrypt the engine to make sure no one can read the vulns. Since pyconcrete should already be installed, you can now run:
 ```py
@@ -162,7 +170,7 @@ Now you want to save the original engine.py onto your Google Drive/Github just i
 
 Then, delete the original **engine.py** from **/opt/temp/** to make sure no one can directly see the vulns.
 
-### Step 6: Setting up the engine service
+### Step 7: Setting up the engine service
 
 After encrypting the engine, you want to make the engine a service so that it runs forever (as long as it's not disabled/stopped).
 
@@ -195,7 +203,7 @@ reboot
 sudo systemctl status engine
 ```
 
-### Step 7: Powering Off and Exporting
+### Step 8: Powering Off and Exporting
 
 After setting up the engine service, the image is fully created with the vulnerabilities and the scoring engine.
 
@@ -203,7 +211,7 @@ Power off the image. After powering off the image, go into the settings and modi
 
 Zip up the entire image directory with **7zip** to a new zip file.
 
-### Step 8: Testing the Image
+### Step 9: Testing the Image
 
 Optimally, have someone else extract the zip file, run the Image, and test every vulnerability to make sure the scoring works properly.
 
