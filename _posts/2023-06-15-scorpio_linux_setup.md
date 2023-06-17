@@ -47,7 +47,7 @@ Here's 4 examples of vulnerabilities you can set up.
     - ```touch /path/to/random/directory/file```
     - Example: ![touchfile](https://github.com/xenonminer/xenonminer.github.io/assets/46347858/6b8b7e42-2a37-4d52-bf5e-bd4716cc2741)
 
-After creating the vulnerabilities, you want to create the **README.pdf**, Forensic Questions, and the **Set Name for Scoring Report** files. Create these files on the Desktop of your main user.
+After creating the vulnerabilities, you want to create the README, Forensic Questions, and the **Set Name for Scoring Report** files. These files will be created on the Desktop of your main user.
 
 The README can be written in Google Docs. [Here is an example README](https://docs.google.com/document/d/1M4mljp9yEzb5GLsibm0Z7RqTzpiPQalwZlfn4i8nixo). After creating the README, download the README as a **pdf** onto the system and rename it to **README.pdf**. Then move it onto the Desktop.
 
