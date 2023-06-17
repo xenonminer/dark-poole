@@ -207,10 +207,10 @@ After setting up the engine service, the image is fully created with the vulnera
 
 Power off the image. After powering off the image, go into the settings and modify the **Memory** to 4 GB and **Processors** to 2 GB. Also modify the image name to the theme of the image.
 
-Zip up the entire image directory with **7zip** to a new zip file.
+Zip up the entire image directory with **7zip** to a new zip file. This may take some time.
 
 ### Step 9: Testing the Image
 
-Optimally, have someone else extract the zip file, run the Image, and test every vulnerability to make sure the scoring works properly.
+Have someone else extract the zip file, run the image, and test every vulnerability to make sure the scoring works properly. Once you do that, you should have a working image!
 
 Hope this helps!
