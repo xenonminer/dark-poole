@@ -62,7 +62,7 @@ The Forensic Question files should be in the format "Forensics_#.txt". Create th
 
 Question: Question_Here
 
-Answer: Answer_Here
+Answer:
 ```
 
 Also, create the "Set Name for Scoring Report" on the Desktop of the main user: ```touch "Set Name for Scoring Report"```. The accepted format is as follows:
