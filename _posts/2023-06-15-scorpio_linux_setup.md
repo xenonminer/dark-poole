@@ -131,30 +131,30 @@ These lines add a vuln object with specific parameters. Going left to right the 
 - Scoring Report message
 
 The 4 vulns from earlier would look like this:
-1. Checking for unauthorized user deletion (user will be bob):
-```py
-vulns.append(newCommandObject(
-  'cat /etc/passwd | grep -v "#" | grep bob | wc -l',
-  '1', False, 5, 'Removed unauthorized user bob'))
+- Checking for unauthorized user deletion (user will be bob):
+  ```py
+  vulns.append(newCommandObject(
+      'cat /etc/passwd | grep -v "#" | grep bob | wc -l',
+      '1', False, 5, 'Removed unauthorized user bob'))
     ```
-3. Fixing GUI Software & Updates Settings
-    ```py
-    vulns.append(newCommandObject(
-        'cat /etc/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Update-Package-Lists" | grep "1" | wc -l', 
-        '1', True, 5, 'Daily updates enabled'))
-    ```
-4. Checking for a deleted package
-    ```py
-    vulns.append(newCommandObject(
-        'apt list --installed hashcat', 'installed', 
-        False, 5, 'Prohibited software hashcat removed'))
-    ```
-5. Checking for a deleted file
-    ```py
-    vulns.append(newCommandObject(
-        'ls /home/bob/.passwords.txt | wc -l', '0', 
-        True, 5, 'Removed plaintext password file'))
-    ```
+- Fixing GUI Software & Updates Settings
+  ```py
+  vulns.append(newCommandObject(
+      'cat /etc/apt/apt.conf.d/20auto-upgrades | grep "APT::Periodic::Update-Package-Lists" | grep "1" | wc -l', 
+      '1', True, 5, 'Daily updates enabled'))
+  ```
+- Checking for a deleted package
+  ```py
+  vulns.append(newCommandObject(
+      'apt list --installed hashcat', 'installed', 
+      False, 5, 'Prohibited software hashcat removed'))
+  ```
+- Checking for a deleted file
+  ```py
+  vulns.append(newCommandObject(
+      'ls /home/bob/.passwords.txt | wc -l', '0', 
+      True, 5, 'Removed plaintext password file'))
+  ```
 
 With these checks, you are trying to find the result to see if it's there and modify the ```newCommandObject``` based on that.
 
