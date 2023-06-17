@@ -132,10 +132,10 @@ These lines add a vuln object with specific parameters. Going left to right the 
 
 The 4 vulns from earlier would look like this:
 1. Checking for unauthorized user deletion (user will be bob):
-   ```py
-   vulns.append(newCommandObject(
-         'cat /etc/passwd | grep -v "#" | grep bob | wc -l',
-         '1', False, 5, 'Removed unauthorized user bob'))
+```py
+vulns.append(newCommandObject(
+  'cat /etc/passwd | grep -v "#" | grep bob | wc -l',
+  '1', False, 5, 'Removed unauthorized user bob'))
     ```
 3. Fixing GUI Software & Updates Settings
     ```py
@@ -174,10 +174,9 @@ Then, delete the original **engine.py** from **/opt/temp/** to make sure no one 
 
 After encrypting the engine, make the engine a service so that it runs forever (as long as it's not disabled/stopped).
 
-Steps to create the **engine** service:
-1. Create file **/lib/systemd/system/engine.service**: ```sudo nano /lib/systemd/system/engine.service```
-2. Copy and paste the following into the file:
-  ```bash
+Create the file **/lib/systemd/system/engine.service** with ```sudo nano /lib/systemd/system/engine.service```
+Copy and paste the following into the file:
+```bash
 [Unit]
 Description=Scoring Engine
 After=network.target
@@ -192,9 +191,9 @@ ExecStart=pyconcrete /opt/temp/engine.pye
   
 [Install]
 WantedBy=multi-user.target
-  ```
+```
 
-Finally, enable the service:
+3. Enable the service:
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable engine
