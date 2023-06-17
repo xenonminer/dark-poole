@@ -83,10 +83,10 @@ Other things to configure are:
 - Autologin for your main user with gdm3
   - To set this up with ```joe```, edit the **/etc/gdm3/custom.conf**
   Then uncomment and edit the following lines to look like this:
-    ```bash
-    AutomaticLoginEnable=true
-    AutomaticLogin=joe
-    ``` 
+      ```bash
+      AutomaticLoginEnable=true
+      AutomaticLogin=joe
+      ``` 
 
 ### Step 3: Cloning Scorpio Repository into the system + Setting up directories
 
