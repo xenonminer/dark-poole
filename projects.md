@@ -22,4 +22,4 @@ title: Projects
 
 | Project | Description |
 |---|---|
-| [ad_pentest](_posts/2024_04-8-ad_pentest.md) | Active Directory Pentesting interface |
+| [ad_pentest](_posts/2024-04-8-ad_pentest.md) | Active Directory Pentesting interface |
