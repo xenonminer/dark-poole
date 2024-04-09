@@ -17,3 +17,9 @@ title: Projects
 |---|---|
 | [wackersBot](_posts/2022-01-10-wackersBot.md) | Discord CTF Bot |
 | [dirfuzzer](_posts/2022-07-26-dirfuzzer.md) | Small Directory Fuzzer |
+
+## 2024
+
+| Project | Description |
+|---|---|
+| [ad_pentest](_posts/2024_04-8-ad_pentest.md) | Active Directory Pentesting interface |
