@@ -21,3 +21,9 @@ title: CTF Writeups
 | [CSAW 2022](_posts/2022-09-11-csaw2022.md) | Web |
 | [DownUnderCTF 2022](_posts/2022-09-26-DownUnderCTF2022.md) | Rev, Pwn, DFIR |
 | [WRECKCTF 2022](_posts/2022-10-03-WRECKCTF2022.md) | Rev |
+
+## 2024
+
+| CTF | Category |
+|---|---|
+| [sunshineCTF 2024](_posts/2024-10-21-sunshineCTF2024.md) | Pwn |
